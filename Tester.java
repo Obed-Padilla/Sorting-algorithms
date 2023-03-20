@@ -19,7 +19,7 @@ public class Tester {
     public static void main(String[] args) throws IOException {
         NumberFormat formatter = NumberFormat.getNumberInstance(Locale.US); // formats the amount of nanoseconds displayed
 
-        List<String> words = Files.readAllLines(Paths.get("15000Words.txt"), StandardCharsets.UTF_8); // reads txt file and stores it in an array list
+        List<String> words = Files.readAllLines(Paths.get("dictionary.txt"), StandardCharsets.UTF_8); // reads txt file and stores it in an array list
   
         String[] transformed = words.toArray(new String[words.size()]); // transforms array list into a String array...
         String[] wordsToSort = transformed.clone(); // makes a copy to safely change it in the future...
@@ -27,7 +27,7 @@ public class Tester {
         // Warm-up Phase (triggers the JVM optimizations)......
         for (int i = 0; i < 550; i++)
         {
-                List<String> getSmaller = Files.readAllLines(Paths.get("2500Words.txt"), StandardCharsets.UTF_8);
+                List<String> getSmaller = Files.readAllLines(Paths.get("64139Words.txt"), StandardCharsets.UTF_8);
                 String[] warmupArray = getSmaller.toArray(new String[getSmaller.size()]);
                 Sorting.bubbleSort(warmupArray);
                 warmupArray = getSmaller.toArray(new String[getSmaller.size()]);
