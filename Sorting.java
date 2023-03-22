@@ -9,7 +9,7 @@ public class Sorting {
         {
             for (int index = 0; index < 5; ++index)
             {
-                System.out.print(arr[i] + "\t");
+                System.out.print(arr[index] + "\t");
             }
             System.out.println();
         }
